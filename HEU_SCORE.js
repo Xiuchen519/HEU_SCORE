@@ -2,10 +2,10 @@
 // @name         HEU_SCORE
 // @namespace    Xiuchen
 // @version      0.1
-// @description  try to take over the world!
+// @description  used to calculate average scores for HEU students
 // @author       Xiuchen
 // @match        https://edusys.wvpn.hrbeu.edu.cn/jsxsd/kscj/cjcx_list
-// @match        https://edusys.hrbeu.edu.cn/jsxsd/kscj/cjcx_list
+// @match        http://edusys.hrbeu.edu.cn/jsxsd/kscj/cjcx_list
 // @grant        none
 // @require      https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js
 // ==/UserScript==
