@@ -30,7 +30,7 @@
             else if(sc == "优秀") sc = 95;
             else if(sc == "良好") sc = 85;
             else if(sc == "中等") sc = 75;
-            else if(sc == "及格") sc = 75;
+            else if(sc == "及格") sc = 65;
             sum_score += sc * cre;
             sum_cre += cre;
         }
