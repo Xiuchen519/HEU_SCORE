@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HEU_SCORE
 // @namespace    Xiuchen
-// @version      0.1
+// @version      0.3
 // @description  used to calculate average scores for HEU students
 // @author       Xiuchen
 // @match        https://edusys.wvpn.hrbeu.edu.cn/jsxsd/kscj/cjcx_list
@@ -31,6 +31,14 @@
             else if(sc == "良好") sc = 85;
             else if(sc == "中等") sc = 75;
             else if(sc == "及格") sc = 65;
+            else if(sc == "不及格"){
+                cnt++;
+                continue;
+            }
+            else if(sc < 60){
+                cnt++;
+                continue;
+            }
             sum_score += sc * cre;
             sum_cre += cre;
         }
@@ -55,7 +63,7 @@
 
     //挂科门数
     var lab_fail = document.createElement("p");
-    lab_fail.innerHTML = "您有 " + "<strong style='font-size:22px; color:red'>" +cnt.toString() + "</strong>" + " 门挂科，挂科成绩未计入均分";
+    lab_fail.innerHTML = "您有 " + "<strong style='font-size:22px; color:red'>" +cnt.toString() + "</strong>" + " 门挂科，挂科成绩未计入均分。如果之后通过了考试，通过考试的分数计入了均分。";
     lab_fail.style.fontSize = "15px";
     by.appendChild(lab_fail);
     // Your code here...
